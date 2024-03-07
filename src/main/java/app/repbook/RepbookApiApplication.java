@@ -18,20 +18,6 @@ public class RepbookApiApplication {
 	}
 
 	@Bean
-	public WebMvcConfigurer corsConfigurer() {
-		return new WebMvcConfigurer() {
-			@Override
-			public void addCorsMappings(CorsRegistry registry) {
-				registry.addMapping("/api/**")
-						.allowedOrigins("http://localhost:4200/")
-						.allowCredentials(true)
-						.allowedMethods("*");
-
-			}
-		};
-	}
-
-	@Bean
 	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 		http.authorizeHttpRequests((authorize) -> authorize.anyRequest().permitAll())
 				.csrf((csrf) -> csrf.disable())

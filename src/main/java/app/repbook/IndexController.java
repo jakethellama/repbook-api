@@ -24,12 +24,6 @@ public class IndexController {
         return new stringResponse("Welcome to RepBook API!");
     }
 
-    // EVERY request made will start with a session/cookie and persist it to redis
-    // if there is no exisitng cookie, a new cookie will be made with no special attributes,
-    // and persisted to redis, this would make all code-requests attributes be null
-    // if there is an existing cookie, it will be used and read normally from redis
-    // session.invalidate(); removes cookie from client AND deletes key from Redis
-
     public record authCheckResponse(Boolean isAuth, String username) {}
 
     @GetMapping("/authCheck")

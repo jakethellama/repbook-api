@@ -28,7 +28,7 @@ public class Credential {
     @Column(unique=true, nullable = false)
     private String username;
     @NotNull
-    @Size(min=5, max=64) // max input = 64
+    @Size(min=5, max=64)
     @Column(nullable = false)
     private String password;
 

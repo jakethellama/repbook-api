@@ -58,8 +58,6 @@ public class MovementServiceImpl implements MovementService {
             throw new BadRequestException();
         }
 
-        // need order valdiation of movements ?
-
         Sset set1 = new Sset(-1, BigDecimal.valueOf(-1), -1, -1);
         Sset set2 = new Sset(-1, BigDecimal.valueOf(-1), -1, -1);
         Sset set3 = new Sset(-1, BigDecimal.valueOf(-1), -1, -1);
